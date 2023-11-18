@@ -1,0 +1,36 @@
+.app {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.app > div {
+  margin-right: 50px;
+}
+
+ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* --------------------------------------- */
+
+.error {
+  border: red 1px solid;
+}
+
+.error-message {
+  color: red;
+}
+
+/* --------------------------------------- */
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+/* --------------------------------------- */
+
+.is-done {
+  opacity: 0.5;
+}

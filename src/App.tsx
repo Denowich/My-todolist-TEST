@@ -6,7 +6,7 @@ import { Todolist } from "./Todolist";
 function App() {
   return (
     <div className="app">
-      <Todolist />
+      <Todolist title='What to learn :'/>
     </div>
   )
 }

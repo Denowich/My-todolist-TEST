@@ -30,6 +30,7 @@ export function Todolist(props: PropsType) {
               setNewTaskTitle('')
             }
           }}
+          placeholder="Enter new task..."
         />
         <button onClick={() => {
           props.addTask(newTaskTitle)

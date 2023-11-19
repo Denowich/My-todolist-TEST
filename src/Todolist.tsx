@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FilterValuesType } from "./App";
 
 export type TasksType = {
   id: string
@@ -11,6 +12,7 @@ type PropsType = {
   tasks: Array<TasksType>
   removeTask: (taskId: string) => void
   addTask: (title: string) => void
+  changefilter: (value: FilterValuesType) => void
 }
 
 export function Todolist(props: PropsType) {
@@ -49,9 +51,9 @@ export function Todolist(props: PropsType) {
         }
       </ul>
       <div>
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        <button onClick={(e) => { props.changefilter('all') }}>All</button>
+        <button onClick={(e) => { props.changefilter('active') }}>Active</button>
+        <button onClick={(e) => { props.changefilter('completed') }}>Completed</button>
       </div>
     </div>
   )

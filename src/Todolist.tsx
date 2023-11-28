@@ -24,13 +24,17 @@ export function Todolist(props: PropsType) {
   const onChangeNewTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => setNewTaskTitle(e.currentTarget.value)
   const onKeyDownHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.ctrlKey && e.code === 'Enter') {
-      props.addTask(newTaskTitle)
-      setNewTaskTitle('')
+      if (newTaskTitle.trim() !== '') {
+        props.addTask(newTaskTitle.trim())
+        setNewTaskTitle('')
+      }
     }
   }
   const addTask = () => {
-    props.addTask(newTaskTitle)
-    setNewTaskTitle('')
+    if (newTaskTitle.trim() !== '') {
+      props.addTask(newTaskTitle.trim())
+      setNewTaskTitle('')
+    }
   }
   const onClickAllHandler = () => props.changefilter('all')
   const onClickActiveHandler = () => props.changefilter('active')
